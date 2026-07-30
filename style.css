@@ -1,0 +1,352 @@
+/* ===========================
+   A Letter For Manjii ❤️
+   Version 4.0
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(to bottom,#050816,#09142d,#101f46);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===== STAR BACKGROUND ===== */
+
+#stars{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background-image:
+    radial-gradient(circle,#ffffff 1px,transparent 1px),
+    radial-gradient(circle,#ffffffaa 1px,transparent 1px);
+
+    background-size:80px 80px,150px 150px;
+
+    animation:twinkle 8s infinite;
+}
+
+/* ===== MOON ===== */
+
+.moon{
+    position:fixed;
+
+    top:60px;
+    right:80px;
+
+    width:140px;
+    height:140px;
+
+    border-radius:50%;
+
+    background:#fff8d6;
+
+    box-shadow:
+    0 0 30px #fff8d6,
+    0 0 80px #fff3a0,
+    0 0 150px rgba(255,255,180,.4);
+
+    z-index:-1;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.glass{
+
+    width:900px;
+    max-width:95%;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 0 40px rgba(255,90,130,.18);
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:64px;
+
+    color:#ff5c93;
+
+    text-shadow:0 0 20px #ff5c93;
+
+    animation:heartbeat 2s infinite;
+
+}
+
+.hero h2{
+
+    margin-top:10px;
+
+    font-size:34px;
+
+}
+
+.subtitle{
+
+    margin-top:20px;
+
+    color:#ffd7e6;
+
+    font-style:italic;
+
+}
+
+#typing{
+
+    margin-top:30px;
+
+    min-height:120px;
+
+    font-size:22px;
+
+    line-height:40px;
+
+    white-space:pre-line;
+
+}
+
+button{
+
+    margin-top:30px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    background:linear-gradient(45deg,#ff5c93,#ff8fb5);
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px #ff5c93;
+
+}
+
+/* ===== GALLERY ===== */
+
+#gallery{
+
+    padding:100px 40px;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:70px;
+
+    color:#ffb4cf;
+
+}
+
+.gallery{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:40px;
+
+}
+
+.photo-card{
+
+    background:white;
+
+    color:#333;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    transition:.4s;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.photo-card:hover{
+
+    transform:translateY(-10px) rotate(-2deg);
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    border-radius:8px;
+
+    display:block;
+
+}
+
+.photo-card p{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    font-size:17px;
+
+    line-height:28px;
+
+}
+
+/* ===== LETTER ===== */
+
+#letter{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px;
+
+}
+
+.letter-text{
+
+    margin-top:30px;
+
+    white-space:pre-line;
+
+    line-height:42px;
+
+    font-size:22px;
+
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes heartbeat{
+
+0%,100%{
+transform:scale(1);
+}
+
+25%{
+transform:scale(1.05);
+}
+
+50%{
+transform:scale(.98);
+}
+
+75%{
+transform:scale(1.08);
+}
+
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.35;
+}
+
+50%{
+opacity:.8;
+}
+
+100%{
+opacity:.35;
+}
+
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:24px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.letter-text{
+font-size:18px;
+line-height:34px;
+}
+
+.glass{
+padding:35px;
+}
+
+.moon{
+
+width:90px;
+height:90px;
+
+right:20px;
+top:20px;
+
+}
+
+}
