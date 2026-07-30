@@ -1,6 +1,6 @@
 /* ====================================
    A Letter For Manjii ❤️
-   Version 4.0
+   Version 5.0
 ==================================== */
 
 const message = `Hey Manjii ❤️
@@ -29,15 +29,39 @@ window.addEventListener("load", () => {
     typeWriter();
 });
 
-/* Smooth Scroll */
+/* =========================
+   Background Music
+========================= */
+
+const bgMusic = document.getElementById("bgMusic");
+
+function startMusic() {
+    bgMusic.play().catch(() => {});
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("touchstart", startMusic);
+}
+
+// Play music on first click/tap anywhere
+document.addEventListener("click", startMusic);
+document.addEventListener("touchstart", startMusic);
+
+/* =========================
+   Smooth Scroll
+========================= */
 
 document.getElementById("startBtn").addEventListener("click", () => {
+
+    bgMusic.play().catch(() => {});
+
     document.getElementById("gallery").scrollIntoView({
         behavior: "smooth"
     });
+
 });
 
-/* Photo Animation */
+/* =========================
+   Photo Animation
+========================= */
 
 const cards = document.querySelectorAll(".photo-card");
 
