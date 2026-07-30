@@ -9,16 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Background -->
+    <!-- Stars -->
     <div id="stars"></div>
+
+    <!-- Moon -->
     <div class="moon"></div>
+
+    <!-- Floating Hearts -->
+    <div id="heart-container"></div>
 
     <!-- HERO -->
     <section class="hero">
@@ -45,7 +50,7 @@
 
     </section>
 
-    <!-- MEMORIES -->
+    <!-- GALLERY -->
 
     <section id="gallery">
 
@@ -54,33 +59,18 @@
         <div class="gallery">
 
             <div class="photo-card">
-
                 <img src="images/photo1.jpg" alt="Memory 1">
-
-                <p>
-                    When we went out together and laughed until our stomachs hurt. ❤️
-                </p>
-
+                <p>When we laughed until our stomachs hurt. ❤️</p>
             </div>
 
             <div class="photo-card">
-
                 <img src="images/photo2.jpg" alt="Memory 2">
-
-                <p>
-                    The best sister anyone could ever ask for. 🌸
-                </p>
-
+                <p>The best sister anyone could ever ask for. 🌸</p>
             </div>
 
             <div class="photo-card">
-
                 <img src="images/photo3.jpg" alt="Memory 3">
-
-                <p>
-                    Every memory with you is a memory I'll always treasure. ❤️
-                </p>
-
+                <p>Every memory with you is a treasure. ❤️</p>
             </div>
 
         </div>
@@ -97,28 +87,63 @@
 
             <p class="letter-text">
 
-                Dear Manjii,
+Dear Manjii,
 
-                Thank you for always being kind,
-                loving and caring.
+Thank you for always being kind.
 
-                Thank you for every smile,
-                every laugh,
-                and every beautiful memory.
+Thank you for always making me laugh.
 
-                You'll always be my Patti.
-                You'll always be my Chechi.
-                You'll always be my Manjii.
+Thank you for always caring for me.
 
-                I love you so much.
+You'll always be my Patti.
 
-                ❤️ Your little brother ❤️
+You'll always be my Chechi.
+
+You'll always be my Manjii.
+
+No matter how old we become...
+
+You'll always be my favourite sister.
+
+❤️ Your little brother ❤️
 
             </p>
 
         </div>
 
     </section>
+
+    <!-- THANK YOU -->
+
+    <section id="ending">
+
+        <h2>❤️ Thank You ❤️</h2>
+
+        <p>
+
+            Thank you for every laugh.
+
+            Thank you for every memory.
+
+            Thank you for being the best sister in the world.
+
+        </p>
+
+        <h1 class="forever">
+            I LOVE YOU FOREVER ❤️
+        </h1>
+
+    </section>
+
+    <!-- Music -->
+
+    <audio id="bgMusic" loop>
+        <source src="Assets/music/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Confetti -->
+
+    <canvas id="confetti"></canvas>
 
     <script src="script.js"></script>
 
